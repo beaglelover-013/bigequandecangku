@@ -159,7 +159,7 @@
       查找表达式: <StatusPlaceHolderImpl/>
       内容: |-
         ```
-        <iframe src="https://testingcf.jsdelivr.net/gh/StageDog/tavern_helper_template/dist/tavern_status/index.html" style="width:100%;height:100vh;border:none;"></iframe>
+        <iframe src="https://testingcf.jsdelivr.net/gh/haocen0215-lang/bigequandecangku/dist/tavern_status/index.html" style="width:100%;height:100vh;border:none;"></iframe>
         ```
       来源:
         用户输入: false
@@ -180,4 +180,4 @@
         启用: true
         类型: 脚本
         内容: |-
-          import 'https://testingcf.jsdelivr.net/gh/haocen0215-lang/tavern_helper_template/dist/tavern_status/脚本/变量结构/index.js';
+          import 'https://testingcf.jsdelivr.net/gh/haocen0215-lang/bigequandecangku/dist/tavern_status/脚本/变量结构/index.js';
