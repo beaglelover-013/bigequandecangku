@@ -1,4 +1,3 @@
-import './style.css';
 import { Schema as SchemaZod } from './schema';
 
 // ---- util functions ----
