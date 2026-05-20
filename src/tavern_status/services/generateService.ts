@@ -3,6 +3,7 @@
 
 import { GameSave } from '../engine/saveSchema';
 import { buildSituationSummary } from './situationBuilder';
+import { getBaseMvuData } from '../utils/variableReader';
 
 export interface GenerateRequest {
   save: GameSave;
@@ -60,15 +61,29 @@ export async function requestAINarration(req: GenerateRequest): Promise<{ ok: bo
  */
 export async function writeAIReplyToChat(reply: string, userMessage?: string): Promise<void> {
   try {
-    const messages: { role: 'user' | 'assistant'; message: string }[] = [];
-
-    if (userMessage) {
-      messages.push({ role: 'user', message: userMessage });
+    await waitGlobalInitialized('Mvu');
+    let data: Mvu.MvuData = await getBaseMvuData();
+    if (typeof Mvu !== 'undefined') {
+      try {
+        const parsed = await Mvu.parseMessage(reply, data);
+        if (parsed) data = parsed;
+      } catch {
+        /* 叙事可能不含变量块 */
+      }
     }
 
-    messages.push({ role: 'assistant', message: reply, data: {} });
+    const messages: { role: 'user' | 'assistant'; message: string; data?: Mvu.MvuData }[] = [];
+    if (userMessage) {
+      messages.push({ role: 'user', message: userMessage, data: await getBaseMvuData() });
+    }
+    messages.push({ role: 'assistant', message: reply, data });
 
     await createChatMessages(messages, { refresh: 'none' });
+
+    const assistantId = getLastMessageId();
+    if (typeof Mvu !== 'undefined') {
+      await Mvu.replaceMvuData(data, { type: 'message', message_id: assistantId });
+    }
   } catch (e) {
     console.error('[primordia] 写入楼层失败', e);
   }

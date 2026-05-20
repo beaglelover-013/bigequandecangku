@@ -395,6 +395,7 @@
       }
     },
     "玩家": {
+      "default": {},
       "type": "object",
       "properties": {
         "基本信息": {
@@ -436,12 +437,15 @@
           }
         },
         "状态": {
+          "default": {},
           "type": "object",
           "properties": {
             "生命值": {
+              "default": {},
               "type": "object",
               "properties": {
                 "当前": {
+                  "default": 100,
                   "type": "number"
                 },
                 "上限": {
@@ -451,9 +455,11 @@
               }
             },
             "精力": {
+              "default": {},
               "type": "object",
               "properties": {
                 "当前": {
+                  "default": 100,
                   "type": "number"
                 },
                 "上限": {
@@ -465,9 +471,11 @@
           }
         },
         "烹饪等级": {
+          "default": {},
           "type": "object",
           "properties": {
             "等级": {
+              "default": 1,
               "type": "number"
             },
             "等级称号": {
@@ -495,12 +503,14 @@
       }
     },
     "角色": {
+      "default": {},
       "type": "object",
       "propertyNames": {
         "type": "string",
         "description": "角色内部id"
       },
       "additionalProperties": {
+        "default": {},
         "type": "object",
         "properties": {
           "显示名": {
@@ -545,9 +555,11 @@
             "type": "string"
           },
           "膀胱值": {
+            "default": {},
             "type": "object",
             "properties": {
               "当前": {
+                "default": 0,
                 "type": "number"
               },
               "上限": {
@@ -557,6 +569,7 @@
             }
           },
           "亲密度阶段": {
+            "default": 1,
             "type": "number"
           },
           "亲密度描述": {
@@ -564,9 +577,11 @@
             "type": "string"
           },
           "好感度": {
+            "default": {},
             "type": "object",
             "properties": {
               "当前": {
+                "default": 0,
                 "type": "number"
               },
               "上限": {

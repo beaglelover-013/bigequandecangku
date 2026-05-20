@@ -29,3 +29,5 @@
     ]
     </JSONPatch>
     </UpdateVariable>
+
+    <StatusPlaceHolderImpl/>
