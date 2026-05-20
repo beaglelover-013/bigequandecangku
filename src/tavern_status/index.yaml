@@ -161,7 +161,7 @@
         ```
         <body>
         <script>
-        $('body').load('https://testingcf.jsdelivr.net/gh/haocen0215-lang/bigequandecangku/dist/tavern_status/index.html')
+        $('body').load('https://testingcf.jsdelivr.net/gh/haocen0215-lang/bigequandecangku/dist/tavern_status/index.html?v=4')
         </script>
         </body>
         ```
