@@ -23,7 +23,11 @@
     "@types/showdown": "^2.0.6",
     "@types/toastr": "^2.1.43",
     "@types/webpack": "^5.28.5",
+<<<<<<< HEAD
     "@typescript-eslint/parser": "^8.59.3",
+=======
+    "@typescript-eslint/parser": "^8.59.4",
+>>>>>>> 0d9dfecb71b4f51c033c0121ff2cb25104a412fb
     "autoprefixer": "^10.5.0",
     "chokidar": "^4.0.3",
     "css-loader": "^7.1.4",
@@ -65,7 +69,11 @@
     "tslib": "^2.8.1",
     "type-fest": "^4.41.0",
     "typescript": "6.0.0-dev.20250807",
+<<<<<<< HEAD
     "typescript-eslint": "^8.59.3",
+=======
+    "typescript-eslint": "^8.59.4",
+>>>>>>> 0d9dfecb71b4f51c033c0121ff2cb25104a412fb
     "unplugin-auto-import": "^20.3.0",
     "unplugin-vue-components": "^29.2.0",
     "vue-eslint-parser": "^10.4.0",
@@ -115,11 +123,14 @@
       "javascript-obfuscator",
       "unrs-resolver",
       "vue-demi"
+<<<<<<< HEAD
     ],
     "approvedBuilds": [
       "@parcel/watcher@2.5.6",
       "unrs-resolver@1.11.1",
       "vue-demi@0.14.10"
+=======
+>>>>>>> 0d9dfecb71b4f51c033c0121ff2cb25104a412fb
     ]
   }
 }
